@@ -1,0 +1,30 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Floor Is Lava!", "Midnight")
+
+local Tab = Window:NewTab("Lobby")
+local Section = Tab:NewSection("")
+local Section = Tab:NewSection("Made By Xaliroles#7856")
+local Section = Tab:NewSection("Develoment Nowartus#1414")
+
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("")
+
+Section:NewSlider("WalkSpeed", "SliderInfo", 650, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpPower", "SliderInfo", 420, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Tab = Window:NewTab("Teleports")
+local Section = Tab:NewSection("")
+Section:NewButton("Win Obby Prize", "Teleports to Prize Parkour!", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28.2182159, 73.7519379, -440.18576, 1, 6.53882296e-07, -6.46856961e-06, 9.42311917e-09, 0.994782805, 0.102015443, 6.50152788e-06, -0.102015443, 0.994782805)
+end)
+Section:NewButton("Tp To Lobby", "Teleports to Prize Parkour!", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1.0314573, 60.8815079, -240.943237, -0.999657333, 1.66083751e-08, 0.0261772834, 1.71876913e-08, 1, 2.19054428e-08, -0.0261772834, 2.2347864e-08, -0.999657333)
+end)
+Section:NewButton("Tp To VIP Land", "Teleports to Prize Parkour!", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-61.6569481, 62.7605057, -242.147034, -0.0610513724, -1.16190684e-08, -0.998134613, -5.65010936e-08, 1, -8.18486701e-09, 0.998134613, 5.58960025e-08, -0.0610513724)
+end)
